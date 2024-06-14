@@ -3,7 +3,7 @@ export default ({ cast, onChoice }) => {
     <nav className="container">
       <ul>
         <li>
-          <details role="list">
+          <details className="dropdown">
             <summary aria-haspopup="listbox" role="link">
               Cast
             </summary>
@@ -11,10 +11,10 @@ export default ({ cast, onChoice }) => {
               {cast.map((member) => (
                 <li key={member.id}>
                   <a
+                    href="#"
                     onClick={() => {
                       onChoice(member);
                     }}
-                    data-tooltip={member.name}
                   >
                     {member.name}
                   </a>

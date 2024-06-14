@@ -1,14 +1,13 @@
 export default ({ member, handleClose }) => {
   return (
-    <dialog id="modal-member" open>
+    <dialog open>
       <article>
-        <a
-          href="#Close"
+        <button
+          style={{ marginTop: "1px" }}
           aria-label="Close"
-          className="close"
-          data-target="modal-member"
+          rel="prev"
           onClick={handleClose}
-        ></a>
+        ></button>
         <div style={{ display: "flex", gap: "1rem" }}>
           <img
             style={{ width: "200px" }}
