@@ -3,6 +3,7 @@ import Welcome from "./components/Welcome";
 import ListCast from "./components/ListCast";
 import Modals from "./components/Modals";
 import Nav from "./components/Nav";
+import "./App.css";
 
 function App() {
   const [memberInfo, setMemberInfo] = useState(null);
@@ -15,7 +16,7 @@ function App() {
 
   useEffect(() => {
     fetchCast();
-  });
+  }, []);
 
   return (
     <>
@@ -50,6 +51,9 @@ function App() {
               //So, you need to pass a function to the child component to change the state in the parent component
               handleClose={() => {
                 setMemberInfo(null);
+              }}
+              handleChange={(memberID) => {
+                setMemberInfo(cast.find((element) => element.id === memberID));
               }}
             />
           )}

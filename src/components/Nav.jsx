@@ -1,12 +1,12 @@
+import "./Nav.css";
+
 export default ({ cast, onChoice }) => {
   return (
     <nav className="container">
       <ul>
         <li>
           <details className="dropdown">
-            <summary aria-haspopup="listbox" role="link">
-              Cast
-            </summary>
+            <summary aria-haspopup="listbox">Cast</summary>
             <ul role="listbox">
               {cast.map((member) => (
                 <li key={member.id}>
